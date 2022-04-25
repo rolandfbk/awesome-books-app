@@ -1,8 +1,6 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable class-methods-use-this */
 const list = document.getElementById('ourList');
 
-export class BookObject {
+class BookObject {
   constructor(titleName, authorName) {
     this.title = titleName;
     this.author = authorName;
@@ -51,7 +49,7 @@ export class BookObject {
     BookObject.setContent();
   }
 
-  remove(btn, key) {
+  static remove(btn, key) {
     btn.addEventListener('click', () => {
       const setBookContentR = JSON.parse(JSON.stringify(localStorage.getItem('bookContent')));
       const newBookObjR = JSON.parse(setBookContentR);
@@ -67,3 +65,5 @@ export class BookObject {
     });
   }
 }
+
+export default BookObject;

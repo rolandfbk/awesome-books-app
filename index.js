@@ -1,11 +1,11 @@
 import { DateTime } from './modules/luxon.js';
 
-import { displayList } from './modules/show-list.js';
-import { displayAdd } from './modules/show-add.js';
-import { displayContact } from './modules/show-contact.js';
+import displayList from './modules/show-list.js';
+import displayAdd from './modules/show-add.js';
+import displayContact from './modules/show-contact.js';
 
-import { ourForm } from './modules/elements.js';
-import { BookObject } from './modules/app.js';
+import ourForm from './modules/elements.js';
+import BookObject from './modules/app.js';
 
 if (localStorage.getItem('bookContent')) {
   BookObject.setContent();
@@ -16,8 +16,7 @@ if (localStorage.getItem('bookContent')) {
 const removeButton = document.querySelectorAll('.removeButton');
 
 removeButton.forEach((button, index) => {
-  const removeBtn = new BookObject();
-  removeBtn.remove(button, index);
+  BookObject.remove(button, index);
 });
 
 ourForm.addEventListener('submit', (event) => {

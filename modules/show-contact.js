@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const displayContact = (booklist, addbook, contactinfo, list, add, contact) => {
+const displayContact = (booklist, addbook, contactinfo, list, add, contact) => {
   booklist.style.display = 'none';
   addbook.style.display = 'none';
   contactinfo.style.display = 'flex';
@@ -10,3 +9,5 @@ export const displayContact = (booklist, addbook, contactinfo, list, add, contac
   list.style.color = '#000';
   list.style.fontWeight = 'normal';
 };
+
+export default displayContact;
