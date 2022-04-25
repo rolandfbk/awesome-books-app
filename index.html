@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awesome Books App</title>
-  <link href="index.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Books App</title>
+    <link href="index.css" rel="stylesheet" />
 </head>
 <body>
+    <section class="navigation">
+        <nav class="nav">
+          <div><b>Awesome Books</b></div>
+          <div>
+            <a href="#" id="list" onclick="displayList(this)">List</a> | <a href="#" id="add" onclick="displayAdd(this)">Add new</a> | <a href="#" id="contact" onclick="displayContact(this)">Contact</a>
+          </div>
+        </nav>
+        <div class="date"></div>
+      </section>
+      <section class="book-list" id="book-list">
+        <h1 class="title">All awesome books</h1>
+        <table class="books-record">
+          <tbody id="ourList"></tbody>
+        </table>
+        <br />
 
-  <script src="index.js"></script>
+      </section>
+      <section class="add-book" id="add-book">
+        <br />
+        <div class="bookForm">
+          <h2>Add a new book</h2>
+          <form id="ourForm">
+            <div>
+              <input id="bookTitle" type="text" placeholder="Title" required />
+            </div>
+            <br />
+            <div>
+              <input id="bookAuthor" type="text" placeholder="Author" required />
+            </div>
+            <br />
+            <div class="btnSubmit">
+              <button id="addButton" type="submit">Add</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="contact-info" id="contact-info">
+        <h2>Contact information</h2>
+
+        <article>
+          <h3>Roland Ossisa Yuma</h3>
+          GitHub: <a href="https://github.com/rolandfbk" target="blank">@rolandfbk</a> <br>
+          Twitter: <a href="https://twitter.com/rolandfbk" target="blank">@rolandfbk</a> <br>
+          LinkedIn: <a href="https://linkedin.com/in/roland-ossisa-yuma-4595547b" target="blank">Roland Ossisa Yuma</a>
+        </article>
+      </section>
+      <section class="footer">
+        <footer>
+          &copy; Roland Ossisa Yuma
+        </footer>
+      </section>
+
+
+      <script src="index.js"></script>
 </body>
 </html>
