@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const displayList = (booklist, addbook, contactinfo, list, add, contact) => {
   booklist.style.display = 'flex';
   addbook.style.display = 'none';
@@ -8,4 +9,4 @@ export const displayList = (booklist, addbook, contactinfo, list, add, contact) 
   add.style.fontWeight = 'normal';
   contact.style.color = '#000';
   contact.style.fontWeight = 'normal';
-}
+};
