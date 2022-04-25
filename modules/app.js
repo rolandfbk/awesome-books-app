@@ -67,5 +67,3 @@ export class BookObject {
     })
   }
 }
-
-//export { ourForm, BookObject }
