@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rolandfbk/awesome-books-app/issues"
   },
-  "homepage": "https://github.com/rolandfbk/awesome-books-app#readme"
+  "homepage": "https://github.com/rolandfbk/awesome-books-app#readme",
+  "dependencies": {
+    "luxon": "^2.3.2"
+  }
 }

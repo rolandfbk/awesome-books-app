@@ -1,13 +1,10 @@
-export const ourForm = document.getElementById('ourForm');
-export const list = document.getElementById('ourList');
-export const bookList = document.getElementById('book-list');
 
-
+const list = document.getElementById('ourList');
 
 export class BookObject {
   constructor(titleName, authorName) {
-      this.title = titleName;
-      this.author = authorName;
+    this.title = titleName;
+    this.author = authorName;
   }
 
   static setContent() {
@@ -51,25 +48,24 @@ export class BookObject {
     newBookContentArray.push(myBookObject);
     localStorage.setItem('bookContent', JSON.stringify(newBookContentArray));
     BookObject.setContent();
-    //location.reload();
-    //bookList.location.reload();
   }
 
   remove(btn, key) {
-      btn.addEventListener("click", () => {
-        const setBookContentR = JSON.parse(JSON.stringify(localStorage.getItem('bookContent')));
-        const newBookObjR = JSON.parse(setBookContentR);
-        if(key === 0)
-        {
-          newBookObjR.splice(key, key+1);
-        } else {
-          newBookObjR.splice(key, key);
-        }
+    btn.addEventListener("click", () => {
+      const setBookContentR = JSON.parse(JSON.stringify(localStorage.getItem('bookContent')));
+      const newBookObjR = JSON.parse(setBookContentR);
+      if(key === 0)
+      {
+        newBookObjR.splice(key, key+1);
+      } else {
+        newBookObjR.splice(key, key);
+      }
 
-        localStorage.setItem('bookContent', JSON.stringify(newBookObjR));
-        BookObject.setContent();
-        location.reload();
-        //bookList.location.reload();
-      })
+      localStorage.setItem('bookContent', JSON.stringify(newBookObjR));
+      BookObject.setContent();
+      location.reload();
+    })
   }
 }
+
+//export { ourForm, BookObject }
