@@ -1,7 +1,7 @@
-export const display_List = (book_list, add_book, contact_info, list, add, contact) => {
-  book_list.style.display = 'flex';
-  add_book.style.display = 'none';
-  contact_info.style.display = 'none';
+export const displayList = (booklist, addbook, contactinfo, list, add, contact) => {
+  booklist.style.display = 'flex';
+  addbook.style.display = 'none';
+  contactinfo.style.display = 'none';
   list.style.color = '#1b628b';
   list.style.fontWeight = 'bold';
   add.style.color = '#000';

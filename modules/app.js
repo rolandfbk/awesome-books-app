@@ -1,4 +1,5 @@
-
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable class-methods-use-this */
 const list = document.getElementById('ourList');
 
 export class BookObject {
@@ -15,7 +16,7 @@ export class BookObject {
 
     const div = [];
     const template = [];
-    if(newBookObj.length > 0){
+    if (newBookObj.length > 0) {
       for (let i = 0; i < newBookObj.length; i += 1) {
         div[i] = document.createElement('tr');
         template[i] = `
@@ -43,7 +44,7 @@ export class BookObject {
     const myBookObject = {
       title: this.title,
       author: this.author,
-    }
+    };
 
     newBookContentArray.push(myBookObject);
     localStorage.setItem('bookContent', JSON.stringify(newBookContentArray));
@@ -51,19 +52,18 @@ export class BookObject {
   }
 
   remove(btn, key) {
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
       const setBookContentR = JSON.parse(JSON.stringify(localStorage.getItem('bookContent')));
       const newBookObjR = JSON.parse(setBookContentR);
-      if(key === 0)
-      {
-        newBookObjR.splice(key, key+1);
+      if (key === 0) {
+        newBookObjR.splice(key, key + 1);
       } else {
         newBookObjR.splice(key, key);
       }
 
       localStorage.setItem('bookContent', JSON.stringify(newBookObjR));
       BookObject.setContent();
-      location.reload();
-    })
+      window.location.reload();
+    });
   }
 }
