@@ -9,11 +9,11 @@ Our goal here is to Build a book application with add and remove feature from sc
 
 ## Features implemented so far are:
 
-Responsive HTML page
-Add book feature
-Remove book feature
-Saving current state of book list to local storage
-Implemented using js modules (ES6)
+- Responsive HTML page
+- Add book feature
+- Remove book feature
+- Saving current state of book list to local storage
+- Implemented using js modules (ES6)
 
 ## Built With
 
