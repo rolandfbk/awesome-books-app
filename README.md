@@ -3,7 +3,7 @@
 
 ## Book List
 
-> This is a team project being built to show the usage of html and javascript. its a book application were you are able to add and remove book to a list
+> This is a project being built to show the usage of html and javascript. its a book application were you are able to add and remove book to a list
 
 Our goal here is to Build a book application with add and remove feature from scratch using JavaScripts.
 
